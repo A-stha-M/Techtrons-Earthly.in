@@ -10,20 +10,250 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            background-image: url("C:/Users/DELL/Downloads/pexels-element5-1470171.jpg");
-            background-size: cover;
-            background-position: center;
+            background-color: #0D546A;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             text-align: center;
             color: #242452;
+            font-size: 26px;
         }
-        #navbar {
-    position: fixed;
+        .container-img {
+            position: relative;
+            display: inline-block;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #0D546A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #cbd3d5;
+            font-size: 26px;
+        }
+        .container1 {
+            width: 80%;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .donation-amount, .billing-info {
+            width: 100%;
+            font-size:26px ;
+
+        }
+        .amount-label, .custom-amount-label, .billing-form label, .checkbox-group label {
+            color: #cbd3d5;
+            font-size: 26px;
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .divider {
+            width: 80%;
+            height: 2px;
+            background: #ccc;
+            margin: 10px auto;
+            font-size: 24px;
+        }
+        .suggested-amounts {
+            margin: 10px 0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .amount-btn {
+            background-color: black;
+            border: 2px solid black;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-align: center;
+            height: 50px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .amount-btn:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+        input[type="number"], .billing-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+            margin: 10px 0;
+            background-color: #becfd5;
+        }
+        .billing-form {
+            width: 100%;
+            font-size: 24px;
+        }
+        .billing-form label {
+            display: block;
+            margin: 28px 0 2px 0;
+            font-size: 24px;
+        }
+        .billing-form input {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 5px 0;
+            max-width: 100%;
+            font-size: 20px;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px;
+            color: #becfd5;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: whitesmoke;
+            color: #242452;
+        }
+        .amount-btn.selected {
+            background-color: white;
+            color: black;
+        }
+
+        .addition {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            background-color: #508595;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-box {
+            margin: 10px;
+            width: 98%;
+            display: flex;
+            border-radius: 10px;
+            color: #becfd5;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .underline-animation {
+            color: #cbd3d5;
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .underline-animation::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 5px;
+            background-color: #c91010;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 1s ease-out;
+        }
+        .underline-animation.show-underline::after {
+            transform: scaleX(1);
+        }
+        .image-box {
+            text-align: center;
+            margin: 50px;
+        }
+        .image-box img {
+            width: 90%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .last {
+            position: relative;
+            height: 70vh;
+            background: url("lastimage.png") center no-repeat;
+        }
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(1, 31, 53, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: last baseline;
+        }
+        header .centered-message {
+            text-align: center;
+            color: white;
+            padding-bottom: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(250,250,250,0.15);
+        }
+        header .centered-message h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        header .centered-message p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        header .centered-message button {
+            background-color: #F3F5E5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        header .centered-message button:hover {
+            background-color: #f44336;
+            transform: scale(1.05);
+            text-size-adjust: 18px;
+        }
+
+
+
+        /* header and footer*/
+     #navbar {
+     height: 85px;
+    position: sticky;
     top: 0;
     width: 100%;
     justify-content: space-between;
@@ -31,7 +261,7 @@
     background-color: transparent; 
     color: white;
     display: flex;
-    z-index: 1000;
+    z-index: 10;
     text-align: center;
     transition: background-color 0.3s; 
 }
@@ -90,316 +320,195 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    
+    margin-right: 5px;
 }
 
 .donate-button:hover {
     background-color: #F9C30D;
     transform: scale(1.05);
 }
+         
+        /* Mobile menu */
+        #menu-btn {
+            display: none;
+        }
 
-    .last {
-    position: relative;
-    height: 70vh;
-    background: url(index\ images/tree\ planting\ 2.jpg) right no-repeat, url(index\ images/tree\ planting\ 1.jpg) left no-repeat ;
-}
+        #mobile-menu {
+            width: 100vw;
+            height: 100vh;
+            z-index: 11;
+            display: none;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 50px;
+            box-sizing: border-box;
+        }
 
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(1, 31, 53, 0.65);
-    display: flex;
-    justify-content: center;
-    align-items: last baseline;
-}
+        #mobile-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
 
-header .centered-message {
-    text-align: center;
-    color: #fff;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgba(35, 143, 143, 0.65);
-}
+        #mobile-menu li {
+            margin: 20px 0;
+        }
 
-header .centered-message h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
+        #mobile-menu a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: #F9C30D;
+            transform: scale(1.05);
+            display: block;
+            margin: auto;
+            transition: .5s;
+        }
 
-header .centered-message p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        #mobile-menu a:hover::after {
+            width: 100%;
+        }
 
-header .centered-message button {
-    background-color: #F3F5E5;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
+        #mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: border-bottom 0.3s ease;
+        }
 
-header .centered-message button:hover {
-    background-color: #f44336;
-    transform: scale(1.05);
-    text-size-adjust: 18px;
-}
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px;
-            padding: 30px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.2);
-            display: flex;
-            flex-direction: column;
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (width < 1000px) {
+            .navbar-links {
+                display: none;
+            }
+
+            .top img {
+                width: 100%;
+            }
+
+            #menu-btn {
+                display: inline;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #011F35;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
             align-items: center;
             text-align: center;
         }
-        .donation-amount, .billing-info {
-            width: 100%;
+
+        .footer-links li {
+            display: inline;
+            margin: 0 15px;
         }
-        .amount-label, .custom-amount-label, .billing-form label, .checkbox-group label {
-            color: #242452;
-            font-size: 18px;
-            text-align: center;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .divider {
-            width: 80%;
-            height: 2px;
-            background: #ccc;
-            margin: 10px auto;
-        }
-        .suggested-amounts {
-            margin: 10px 0;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .amount-btn {
-            background-color: #242452;
-            border: 2px solid #242452;
+
+        .footer-links a {
             color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
         }
-        .amount-btn:hover {
-            background-color: whitesmoke;
-            color: #242452;
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
-        input[type="number"], .billing-form input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            max-width: 300px;
-            box-sizing: border-box;
-            margin: 10px 0;
-        }
-        .billing-form {
-            width: 100%;
-        }
-        .billing-form label {
-            display: block;
-            margin: 10px 0;
-            font-size: 16px;
-        }
-        .billing-form input {
-            width: 100%;
-            box-sizing: border-box;
-            margin: 10px 0;
-            max-width: 100%;
-        }
-        .checkbox-group {
-            margin: 10px 0;
-            text-align: center;
-        }
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 5px;
-        }
-        .submit-btn {
-            background-color: #242452;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            text-align: center;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .submit-btn:hover {
-            background-color: whitesmoke;
-            color: #242452;
-        }
-        .addition {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-        .text-box {
-            width: 100%;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            text-align: center;
-        }
-        .underline-animation {
-            display: inline-block;
-            position: relative;
-            font-weight: bold;
-            font-size: 40px;
-        }
-        .underline-animation::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 5px;
-            background-color: #c91010;
-            transform: scaleX(0);
-            transform-origin: bottom left;
-            transition: transform 1s ease-out;
-        }
-        .underline-animation.show-underline::after {
-            transform: scaleX(1);
-        }
-        .image-box {
-            text-align: center;
+
+        .social-icons {
             margin-top: 20px;
         }
-        .image-box img {
-            width: 90%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 10px;
+
+        .social-icon {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
         }
 
+        .social-icon:hover {
+            color: #f44336;
+        }
 
+        /*see*/
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-        .last {
-        position: relative;
-        height: 70vh;
-        background: url("lastimage.png") center no-repeat;
-    }
-    
-    header .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(1, 31, 53, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: last baseline;
-    }
-    
-    header .centered-message {
-        text-align: center;
-        color: white;
-        padding-bottom: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        background-color: rgba(250,250,250,0.15)
+        .contact-container form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-container form input,
+        .contact-container form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-container form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #011F35;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-container form button:hover {
+            background-color: #F9C30D;
+        }
         
-    }
-    
-    header .centered-message h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-    }
-    
-    header .centered-message p {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-    header .centered-message button {
-        background-color: #F3F5E5;
-        color: black;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 18px;
-    }
-    
-    header .centered-message button:hover {
-        background-color: #f44336;
-        transform: scale(1.05);
-        text-size-adjust: 18px;
 
-    }
-
-    footer {
-    background-color: #011F35;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-.footer-links li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icon {
-    color: white;
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #f44336;
-}
 
     </style>
 </head>
+
+
 <body>
     <nav id="navbar">
         <div class="navbar-logo">
@@ -410,96 +519,102 @@ header .centered-message button:hover {
             <li><a href="index.html">Home</a></li>
             <li><a href="create an impact.html">Create an Impact</a></li>
             <li><a href="what we do.html">What We Do</a></li>
-            <li><a href="earthly events.html">Earthly Events</a></li>
+            <li><a href="e-waste.html">E-Wastage</a></li>
             <li><a href="profile.html">Profile</a></li>
+            <li><a href="plan.html">Plans</a></li>
             <li><a href="review.html">Reviews</a></li>
             <li><a href="contact us.html">Contact Us</a></li>
         </ul>
         <button class="donate-button">DONATE</button>
+        <button class="donate-button" id="menu-btn">=</button>
     </nav>
-    <header class="last">
-        <div class="overlay">
-            <div class="centered-message">
-                <h1>YOUR Donation HELP US!</h1>
-                <p>Hey HERO! You contributed to us by visiting our site.</p>
-                <button>Know More!</button>
-            </div>
-        </div>
-   </header>
+    <div id="mobile-menu">
+        <button id="close-btn">X</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create an impact.html">Create an Impact</a></li>
+            <li><a href="what we do.html">What We Do</a></li>
+            <li><a href="e-waste.html">Earthly Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="plan.html">Plans</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </div>     
 
-   
-   
+
+
+    <div class="container-img">
+        <img src="index images/donationimage.png" alt="Donation Image">
+    </div>
+
     <div class="container">
         <div class="addition">
-            <h1><b>You can help protect India’s people and nature by making a tax-deductible donation to The Nature Conservancy.</b></h1>
-            <h2>When you donate, you’re supporting effective solutions to big environmental challenges—an investment in the future of our planet.</h2>
-        </div>
-        <div class="donation-amount">
-            <span class="amount-label"><b>Donation Amount</b></span>
+            <h2>Support Solutions for Environmental Challenges</h2></div>
+        <div class="container1">
+            <div class="donation-amount">
+                <span class="amount-label"><b>Donation Amount</b></span>
+                <div class="divider"></div>
+                <div class="suggested-amounts">
+                    <p>SUGGESTED AMOUNTS</p>
+                    <button class="amount-btn" onclick="updateCustomAmount(1000)">Rs. 1000</button>
+                    <button class="amount-btn" onclick="updateCustomAmount(2000)">Rs. 2000</button>
+                    <button class="amount-btn" onclick="updateCustomAmount(3000)">Rs. 3000</button>
+                    <button class="amount-btn" onclick="updateCustomAmount(4000)">Rs. 4000</button>
+                    <button class="amount-btn" onclick="updateCustomAmount(5000)">Rs. 5000</button>
+                    <button class="amount-btn" onclick="updateCustomAmount(6000)">Rs. 6000</button>
+                </div>
+                <label for="custom-amount" class="custom-amount-label">Your donation: Rs.</label>
+                <input type="number" id="custom-amount" name="custom-amount" min="100" max="100000000" value="100">
+            </div>
+
+            <h3>Your billing information</h3>
             <div class="divider"></div>
-            <div class="suggested-amounts">
-                <p>SUGGESTED AMOUNTS</p>
-                <button class="amount-btn">Rs. 1000</button>
-                <button class="amount-btn">Rs. 2000</button>
-                <button class="amount-btn">Rs. 3000</button>
-                <button class="amount-btn">Rs. 4000</button>
-                <button class="amount-btn">Rs. 5000</button>
-                <button class="amount-btn">Rs. 6000</button>
-            </div>
-            <label for="custom-amount" class="custom-amount-label">Your donation: Rs.</label>
-            <input type="number" id="custom-amount" name="custom-amount" min="100" max="100000000" value="100">
+            <form class="billing-form" onsubmit="handleSubmit(event)">
+                <label for="billing-name">Billing name</label>
+                <input type="text" id="billing-name" name="billing-name" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="pin">PIN</label>
+                <input type="text" id="pin" name="pin" required>
+
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="passport-pan">Passport or PAN number</label>
+                <input type="text" id="passport-pan" name="passport-pan" required>
+
+                <h4><b>You’ll receive email updates from The Nature Conservancy. You can unsubscribe at any time.</b></h4>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>.
+                </div>
+
+                <button type="submit" class="submit-btn">Donate Now</button>
+            </form>
         </div>
-
-        <h3>Your billing information</h3>
-        <div class="divider"></div>
-        <form class="billing-form">
-            <label for="billing-name">Billing name</label>
-            <input type="text" id="billing-name" name="billing-name" required>
-
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" required>
-
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
-
-            <label for="state">State</label>
-            <input type="text" id="state" name="state" required>
-
-            <label for="pin">PIN</label>
-            <input type="text" id="pin" name="pin" required>
-
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="passport-pan">Passport or PAN number</label>
-            <input type="text" id="passport-pan" name="passport-pan" required>
-
-            <h4><b>You’ll receive email updates from The Nature Conservancy. You can unsubscribe at any time. </b></h4>
-
-            <div class="checkbox-group">
-                <input type="checkbox" id="terms" name="terms" required> I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>.
-            </div>
-
-            <button type="submit" class="submit-btn">Donate Now</button>
-        </form>
     </div>
     <div class="addition">
         <h1 class="underline-animation">Your donation matters!</h1>
-        
-        <div class="text-box">
-            <p><h2>
-                Your donation to "Where it is needed most" allows us to flexibly respond to urgent needs and special projects like our Timber Innovation 
-                Center in Uganda, impacting healthcare, education, and sustainable development. 
-            </h2>
-            </p>
-        </div>
         <div class="image-box">
-            <img src="index images/donation.png" alt="Donation Screenshot" />
+            <img src="index images/donation.png" alt="Donation Screenshot">
+        </div>
+        <div class="text-box">
+            <h2>Support Urgent Needs and Sustainable Projects!</h2>
         </div>
     </div>
+
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Earthly.in. All rights reserved.</p>
@@ -524,190 +639,70 @@ header .centered-message button:hover {
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function() {
-const navbar = document.getElementById('navbar');
-if (window.scrollY > 0) {
-    navbar.style.display = 'flex';
-    navbar.style.backgroundColor = '#011F35'; // Change to black on scroll
-} else {
-    navbar.style.display = 'flex'; // Keep the navbar visible
-    navbar.style.backgroundColor = 'transparent'; // Revert to transparent if desired
-}
-});
-        document.addEventListener('DOMContentLoaded', function () {
-            const element = document.querySelector('.underline-animation');
 
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show-underline');
-                    }
-                });
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const element = document.querySelector('.underline-animation');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-underline');
+                }
             });
-
-            observer.observe(element);
         });
-    </script>
+    
+        observer.observe(element);
+    
+        function updateCustomAmount(amount, event) {
+            document.getElementById('custom-amount').value = amount;
+    
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('selected');
+                btn.style.backgroundColor = '';
+            });
+    
+            const selectedButton = event.currentTarget;
+            selectedButton.classList.add('selected');
+            selectedButton.style.backgroundColor = '#YourSelectedColor'; 
+        }
+    
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Thank you for your donation! Your contribution helps us protect the environment and support sustainable projects.");
+            document.querySelector('.billing-form').reset();
+    
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('selected');
+                btn.style.backgroundColor = ''; 
+            });
+            document.getElementById('custom-amount').value = 100; 
+        }
+    
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.style.display = 'flex';
+                navbar.style.backgroundColor = '#011F35';
+            } else {
+                navbar.style.display = 'flex';
+                navbar.style.backgroundColor = 'transparent';
+            }
+        });
+    
+        const menuBtn = document.getElementById('menu-btn');
+        menuBtn.addEventListener('click', () => {
+            document.getElementById('mobile-menu').style.display = 'block';
+        });
+    
+        const closeBtn = document.getElementById('close-btn');
+        closeBtn.addEventListener('click', () => {
+            document.getElementById('mobile-menu').style.display = 'none';
+        });
+    
+        window.updateCustomAmount = updateCustomAmount;
+        window.handleSubmit = handleSubmit;
+    });
+   
+</script> 
 </body>
 </html>
-
-
-<!--On Mon, 5 Aug 2024 at 13:14, Astha Mishra <astha28february@gmail.com> wrote:
-Ye waala <head> mein daal dena nhi to footer ke icons nahi aayenge:
-//TO BE INCLUDED IN HEAD
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-//CODE FOR NAVBAR
-
-
-<nav id="navbar">
-        <div class="navbar-logo">
-            <img src="index images/logo.png" alt="Earthly.in Logo">
-            <span>Earthly.in</span>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="create an impact.html">Create an Impact</a></li>
-            <li><a href="what we do.html">What We Do</a></li>
-            <li><a href="earthly events.html">Earthly Events</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="review.html">Reviews</a></li>
-            <li><a href="contact us.html">Contact Us</a></li>
-        </ul>
-        <button class="donate-button">DONATE</button>
-    </nav>
-
-
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #0D546A;
-}
-
-/* Present in all pages*/
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent; 
-    color: white;
-    display: flex;
-    z-index: 1000;
-    text-align: center;
-    transition: background-color 0.3s; 
-}
-
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-logo img {
-    height: 45px;
-    margin-right: 0;
-}
-
-.navbar-logo span {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.navbar-links {
-    flex: 1;
-    text-align: right;
-}
-
-.navbar-links li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.navbar-links li a{
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-}
-.navbar-links li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #F9C30D;
-    display: block;
-    margin: auto;
-    transition: .5s;    
-}
-.navbar-links li:hover::after{
-    width: 100%;
-}
-.donate-button {
-    background-color: transparent;
-    color: white;
-    border: 1.5px solid white;
-    padding: 5px 15px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    
-}
-
-.donate-button:hover {
-    background-color: #F9C30D;
-    transform: scale(1.05);
-}
-
-.message-above-header {
-    text-align: center;
-    
-
-}
-
-.top {
-    position: relative;
-    text-align: center;
-    color: black;
-    padding-bottom: 20px;
-}
-
-
-
-.header-text1 {
-    
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 49px;
-       
-}
-
-.header-text2 {
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    font-weight: bold;
-}
-
-
-
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 0) {
-        navbar.style.display = 'flex';
-        navbar.style.backgroundColor = '#011F35'; // Change to black on scroll
-    } else {
-        navbar.style.display = 'flex'; // Keep the navbar visible
-        navbar.style.backgroundColor = 'transparent'; // Revert to transparent if desired
-    }
-}); -->
-
